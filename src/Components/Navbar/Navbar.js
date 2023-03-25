@@ -13,25 +13,22 @@ const Navbar = () => {
             <div id='navFiltros' className='navFiltros'>
                 <ul>
                     <li>
-                        <FilterButtons label='Todas las películas' callback={() => console.log('Todas las películas')} />
+                        <FilterButtons label='Todas los productos' callback={() => console.log('Todas las películas')} />
                     </li>
                     <li>
-                        <FilterButtons label='Acción' callback={() => console.log('Acción')} />
+                        <FilterButtons label='Smartphones' callback={() => console.log('Acción')} />
                     </li>
                     <li>
-                        <FilterButtons label='Aventura' callback={() => console.log('Aventura')} />
+                        <FilterButtons label='Portátiles' callback={() => console.log('Aventura')} />
                     </li>
                     <li>
-                        <FilterButtons label='Ciencia Ficción' callback={() => console.log('Ciencia Ficción')} />
+                        <FilterButtons label='Tabletas' callback={() => console.log('Ciencia Ficción')} />
                     </li>
                     <li>
-                        <FilterButtons label='Comedia' callback={() => console.log('Comedia')} />
+                        <FilterButtons label='Auriculares' callback={() => console.log('Comedia')} />
                     </li>
                     <li>
-                        <FilterButtons label='Drama' callback={() => console.log('Drama')} />
-                    </li>
-                    <li>
-                        <FilterButtons label='Fantasía' callback={() => console.log('Fantasía')} />
+                        <FilterButtons label='Televisores' callback={() => console.log('Drama')} />
                     </li>
                 </ul>
             </div>

@@ -1,23 +1,23 @@
-import '../../Styles/styles.scss'
 import { useEffect, useState } from 'react'
 import { getProducts } from '../../asyncMock'
 import ItemList from '../ItemList/ItemList'
+import '../../Styles/styles.scss'
 
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = ({ greeting }) => {
 
-    const [products, setProducts] = useState([])
+    const [productos, setProductos] = useState([])
 
     useEffect(() => {
         getProducts()
-            .then(productos => {
-                setProducts(productos)
+            .then(products => {
+                setProductos(products)
             })
     }, [])
 
     return (
         <div>
             <h2>{greeting}</h2>
-            <ItemList products={products}/>
+            <ItemList productos={productos} />
         </div>
     )
 }

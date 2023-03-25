@@ -4,7 +4,7 @@ import search from './assets/search.svg'
 const SearchBar = () => {
     return (
         <div className='navAccionesForm'>
-            <input type="text" id="navBuscador" placeholder="Buscar película"/>
+            <input type="text" id="navBuscador" placeholder="Buscar producto"/>
             <button id="navBotonBuscar"><img src={search} alt='Search'/></button>
         </div>
     )
