@@ -160,3 +160,11 @@ const productos = [
         img: './assets/id20/img1.jpg'
     }
 ];
+
+export const getProducts = () => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(productos)
+        }, 1500)
+    })
+}

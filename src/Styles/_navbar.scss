@@ -1,0 +1,41 @@
+.navBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: auto;
+  padding: 5px;
+}
+
+.logo {
+  display: flex;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  h1 {
+    margin: 0;
+    font-weight: 300;
+    font-size: 2rem;
+    color: black;
+  }
+}
+
+.navFiltros ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  gap: 0.5rem;
+}
+
+.navAcciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}

@@ -1,0 +1,35 @@
+.navAccionesForm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+#navBuscador {
+  font-family: "Rubik", sans-serif;
+  outline: none;
+  border-radius: 3px;
+  border: solid black 1px;
+  color: black;
+  height: 1.2rem;
+  font-size: 0.9rem;
+}
+
+#navBotonBuscar {
+  border-radius: 4px;
+  border: none;
+  padding: 4px;
+  background-color: transparent;
+  transition: all 0.3s ease;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+
+  img {
+    height: 1.5rem;
+    width: auto;
+  }
+}
