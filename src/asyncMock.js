@@ -5,7 +5,7 @@ const products = [
         descripcion: 'Smartphone con pantalla OLED de 6,1", cámara triple de 12MP y 5G',
         categoria: 'Smartphones',
         precio: 1099,
-        imgUrl: './assets/id1/img1.jpg'
+        imgUrl: '../assets/id1/img1.jpg'
     },
     {
         id: 2,
@@ -13,7 +13,7 @@ const products = [
         descripcion: 'Smartphone con pantalla AMOLED de 6,8", cámara cuádruple de 108MP y 5G',
         categoria: 'Smartphones',
         precio: 1199,
-        imgUrl: './assets/id2/img1.jpg'
+        imgUrl: '../assets/id2/img1.jpg'
     },
     {
         id: 3,
@@ -21,7 +21,7 @@ const products = [
         descripcion: 'Portátil gaming con procesador AMD Ryzen 7, tarjeta gráfica NVIDIA GeForce RTX 3060 y pantalla de 15,6"',
         categoria: 'Portátiles',
         precio: 1399,
-        imgUrl: './assets/id3/img1.jpg'
+        imgUrl: '../assets/id3/img1.jpg'
     },
     {
         id: 4,
@@ -29,7 +29,7 @@ const products = [
         descripcion: 'Tableta con pantalla Liquid Retina de 10,9", chip A14 Bionic y soporte para Apple Pencil',
         categoria: 'Tabletas',
         precio: 599,
-        imgUrl: './assets/id4/img1.jpg'
+        imgUrl: '../assets/id4/img1.jpg'
     },
     {
         id: 5,
@@ -37,7 +37,7 @@ const products = [
         descripcion: 'Auriculares inalámbricos con cancelación de ruido, control táctil y batería de hasta 30 horas',
         categoria: 'Auriculares',
         precio: 349,
-        imgUrl: './assets/id5/img1.jpg'
+        imgUrl: '../assets/id5/img1.jpg'
     },
     {
         id: 6,
@@ -45,7 +45,7 @@ const products = [
         descripcion: 'Televisor OLED de 55" con resolución 4K, soporte para HDR y Dolby Vision, y sistema operativo webOS',
         categoria: 'Televisores',
         precio: 1799,
-        imgUrl: './assets/id6/img1.jpg'
+        imgUrl: '../assets/id6/img1.jpg'
     },
     {
         id: 7,
@@ -53,7 +53,7 @@ const products = [
         descripcion: 'Smartphone plegable con pantalla principal de 7,6", pantalla secundaria de 6,2", cámara triple y 5G',
         categoria: 'Smartphones',
         precio: 1799,
-        imgUrl: './assets/id7/img1.jpg'
+        imgUrl: '../assets/id7/img1.jpg'
     },
     {
         id: 8,
@@ -61,7 +61,7 @@ const products = [
         descripcion: 'Portátil con procesador Intel Core i7, pantalla Full HD de 13,4", 16GB de RAM y SSD de 512GB',
         categoria: 'Portátiles',
         precio: 1399,
-        imgUrl: './assets/id8/img1.jpg'
+        imgUrl: '../assets/id8/img1.jpg'
     },
     {
         id: 9,
@@ -69,7 +69,7 @@ const products = [
         descripcion: 'Tableta con pantalla Super AMOLED de 12,4", S Pen incluido y 5G',
         categoria: 'Tabletas',
         precio: 849,
-        imgUrl: './assets/id9/img1.jpg'
+        imgUrl: '../assets/id9/img1.jpg'
     },
     {
         id: 10,
@@ -77,7 +77,7 @@ const products = [
         descripcion: 'Auriculares inalámbricos con cancelación de ruido y resistencia al sudor y la lluvia',
         categoria: 'Auriculares',
         precio: 279,
-        imgUrl: './assets/id10/img1.jpg'
+        imgUrl: '../assets/id10/img1.jpg'
     },
     {
         id: 11,
@@ -85,7 +85,7 @@ const products = [
         descripcion: 'Televisor OLED de 65" con resolución 4K, soporte para HDR y Dolby Vision, y sistema operativo Google TV',
         categoria: 'Televisores',
         precio: 2499,
-        imgUrl: './assets/id11/img1.jpg'
+        imgUrl: '../assets/id11/img1.jpg'
     },
     {
         id: 12,
@@ -93,7 +93,7 @@ const products = [
         descripcion: 'Smartphone con pantalla Retina de 4,7", cámara de 12MP y procesador A13 Bionic',
         categoria: 'Smartphones',
         precio: 399,
-        imgUrl: './assets/id12/img1.jpg'
+        imgUrl: '../assets/id12/img1.jpg'
     },
     {
         id: 13,
@@ -101,7 +101,7 @@ const products = [
         descripcion: 'Portátil 2 en 1 con procesador Intel Core i7, pantalla táctil Full HD de 13,3" y 16GB de RAM',
         categoria: 'Portátiles',
         precio: 1499,
-        imgUrl: './assets/id13/img1.jpg'
+        imgUrl: '../assets/id13/img1.jpg'
     },
     {
         id: 14,
@@ -109,7 +109,7 @@ const products = [
         descripcion: 'Tableta con pantalla Liquid Retina XDR de 12,9", chip M1 y soporte para Apple Pencil y Magic Keyboard',
         categoria: 'Tabletas',
         precio: 1099,
-        imgUrl: './assets/id14/img1.jpg'
+        imgUrl: '../assets/id14/img1.jpg'
     },
     {
         id: 15,
@@ -117,7 +117,7 @@ const products = [
         descripcion: 'Auriculares inalámbricos con cancelación de ruido, control táctil y batería de hasta 30 horas',
         categoria: 'Auriculares',
         precio: 249,
-        imgUrl: './assets/id15/img1.jpg'
+        imgUrl: '../assets/id15/img1.jpg'
     },
     {
         id: 16,
@@ -125,7 +125,7 @@ const products = [
         descripcion: 'Televisor LED de 65" con resolución 4K, soporte para HDR y Dolby Vision, y sistema operativo webOS',
         categoria: 'Televisores',
         precio: 1299,
-        imgUrl: './assets/id16/img1.jpg'
+        imgUrl: '../assets/id16/img1.jpg'
     },
     {
         id: 17,
@@ -133,7 +133,7 @@ const products = [
         descripcion: 'Smartphone con pantalla AMOLED de 6,4", cámara dual de 50MP y 5G',
         categoria: 'Smartphones',
         precio: 799,
-        imgUrl: './assets/id17/img1.jpg'
+        imgUrl: '../assets/id17/img1.jpg'
     },
     {
         id: 18,
@@ -141,7 +141,7 @@ const products = [
         descripcion: 'Portátil gaming con procesador AMD Ryzen 9, tarjeta gráfica NVIDIA GeForce RTX 3060 y pantalla de 14"',
         categoria: 'Portátiles',
         precio: 1799,
-        imgUrl: './assets/id18/img1.jpg'
+        imgUrl: '../assets/id18/img1.jpg'
     },
     {
         id: 19,
@@ -149,7 +149,7 @@ const products = [
         descripcion: 'Tableta con pantalla LCD de 10,4", procesador Qualcomm Snapdragon y 3GB de RAM',
         categoria: 'Tabletas',
         precio: 239,
-        imgUrl: './assets/id19/img1.jpg'
+        imgUrl: '../assets/id19/img1.jpg'
     },
     {
         id: 20,
@@ -157,7 +157,7 @@ const products = [
         descripcion: 'Auriculares inalámbricos con cancelación de ruido, resistencia al sudor y la lluvia, y carga inalámbrica',
         categoria: 'Auriculares',
         precio: 249,
-        imgUrl: './assets/id20/img1.jpg'
+        imgUrl: '../assets/id20/img1.jpg'
     }
 ];
 
@@ -165,6 +165,6 @@ export const getProducts = () => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(products)
-        }, 1500)
+        }, 0)
     })
 }
