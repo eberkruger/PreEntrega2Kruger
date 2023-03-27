@@ -1,10 +1,8 @@
-h2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Rubik", sans-serif;
-  text-transform: uppercase;
-  font-weight: 300;
-  margin: 0;
-  padding: 50px;
+.cardContainer {
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 25px;
 }

@@ -3,7 +3,7 @@ import { getProducts } from '../../asyncMock'
 import ItemList from '../ItemList/ItemList'
 import '../../Styles/styles.scss'
 
-const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = () => {
 
     const [productos, setProductos] = useState([])
 
@@ -15,7 +15,7 @@ const ItemListContainer = ({ greeting }) => {
     }, [])
 
     return (
-        <div>
+        <div className='cardContainer'>
             <ItemList productos={productos} />
         </div>
     )
