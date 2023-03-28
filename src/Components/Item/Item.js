@@ -1,14 +1,16 @@
 import '../../Styles/styles.scss'
-import cartSvg from './assets/cart.svg'
+import { Link } from 'react-router-dom'
 
-const Item = ({ nombre, descripcion, imgUrl, precio }) => {
+const Item = ({ nombre, descripcion, imgUrl, precio, id }) => {
     return (
         <div className='card'>
             <h3>{nombre}</h3>
             <img src={imgUrl} alt={nombre} />
             <p>{descripcion}</p>
-            <p>Precio: USD{precio}</p>
-            <button><img src={cartSvg} alt={'Carrito de compras'} /></button>
+            <p className='precio'>Precio: USD{precio}</p>
+            <div className='cardAction'>
+                <Link to={`/item/${id}`} className='option'>Ver detalle</Link>
+            </div>
         </div>
     )
 }

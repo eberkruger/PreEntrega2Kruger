@@ -1,0 +1,52 @@
+.cardDetail {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 1000px;
+  max-height: auto;
+  padding: 30px;
+  gap: 10px;
+  margin: 0;
+  border: black solid 2px;
+  border-radius: 6px;
+
+  .cardDetailLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    gap: 30px;
+    flex-wrap: wrap;
+
+    img {
+      height: auto;
+      max-height: 250px;
+      min-width: auto;
+      width: max-content;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+  }
+
+  .cardDetailRight {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 30px;
+    align-items: center;
+    text-align: center;
+    object-fit: cover;
+
+    span {
+        font-weight: 500;
+    }
+
+    .cardDetailInfo {
+      max-width: 800px;
+    }
+  }
+}

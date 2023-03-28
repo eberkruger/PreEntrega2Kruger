@@ -1,0 +1,56 @@
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  gap: 20px;
+
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    gap: 10px;
+
+    span {
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+
+    .controlsButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        height: 32px;
+        border: black solid 1px;
+        border-radius: 6px;
+        padding: 5px;
+    }
+
+    .controlsNumber {
+        font-weight: 400;
+        font-size: 1.2rem;
+    }
+  }
+
+  .cartAddContainer {
+
+      .cartAdd {
+        display: flex;
+        border: black solid 1px;
+        border-radius: 6px;
+        padding: 8px;
+      }
+
+      button {
+        display: flex;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+      
+  }
+  
+}

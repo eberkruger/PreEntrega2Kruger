@@ -7,9 +7,13 @@
   justify-content: space-between;
   padding: 10px;
   max-width: 350px;
-  height: 450px;
+  height: 480px;
   border-radius: 8px;
   border: black solid 2px;
+
+  .precio {
+    font-weight: 500;
+  }
 
   h3 {
     padding: 5px;
@@ -28,17 +32,23 @@
     object-fit: cover;
   }
 
-  button {
-    width: 100px;
-    border-radius: 8px;
-    cursor: pointer;
-    padding: 5px;
-    
-    img {
-      border-radius: 8px;
-      width: auto;
-      height: 30px;
-      background-color: transparent;
+  .cardAction {
+    display: flex;
+    gap: 30px;
+
+    p {
+      font-weight: 700;
+    }
+
+    .option {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      align-content: center;
+      height: 40px;
+      border: black solid 1px;
+      border-radius: 6px;
+      padding: 5px;
     }
   }
 }
