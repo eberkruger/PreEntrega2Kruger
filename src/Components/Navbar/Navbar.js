@@ -14,19 +14,19 @@ const Navbar = () => {
             <div id='navFiltros' className='navFiltros'>
                 <ul>
                     <li>
-                        <Link to='/category/Smartphones' /* className={({ isActive }) => isActive ? 'disabled' : 'cardContainer'} */><FilterButtons label='Smartphones' callback={() => console.log('Smartphones')} /></Link>
+                        <Link to='/category/Smartphones' className='linkNavbar'><FilterButtons label='Smartphones' callback={() => console.log('Smartphones')} /></Link>
                     </li>
                     <li>
-                        <Link to='/category/Portátiles'><FilterButtons label='Portátiles' callback={() => console.log('Portátiles')} /></Link>
+                        <Link to='/category/Portátiles' className='linkNavbar'><FilterButtons label='Portátiles' callback={() => console.log('Portátiles')} /></Link>
                     </li>
                     <li>
-                        <Link to='/category/Tabletas'><FilterButtons label='Tabletas' callback={() => console.log('Tabletas')} /></Link>
+                        <Link to='/category/Tabletas' className='linkNavbar'><FilterButtons label='Tabletas' callback={() => console.log('Tabletas')} /></Link>
                     </li>
                     <li>
-                        <Link to='/category/Auriculares'><FilterButtons label='Auriculares' callback={() => console.log('Auriculares')} /></Link>
+                        <Link to='/category/Auriculares' className='linkNavbar'><FilterButtons label='Auriculares' callback={() => console.log('Auriculares')} /></Link>
                     </li>
                     <li>
-                        <Link to='/category/Televisores'><FilterButtons label='Televisores' callback={() => console.log('Televisores')} /></Link>
+                        <Link to='/category/Televisores' className='linkNavbar'><FilterButtons label='Televisores' callback={() => console.log('Televisores')} /></Link>
                     </li>
                 </ul>
             </div>

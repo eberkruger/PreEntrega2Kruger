@@ -5,7 +5,7 @@
   justify-content: space-around;
   flex-wrap: wrap;
   height: auto;
-  padding: 5px;
+  padding: 10px;
 }
 
 .logo {
@@ -21,15 +21,17 @@
   }
 }
 
-.navFiltros ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  text-decoration: none;
-  list-style: none;
-  gap: 0.5rem;
+.navFiltros {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    gap: 0.5rem;
+  }
 }
 
 .navAcciones {
