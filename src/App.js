@@ -9,8 +9,8 @@ const App = () => {
   return (
     <div className="App">
       <BrowserRouter >
-          <Navbar />
-          <Hero greeting={'Tienda OnLine de Tecnología'} greeting2={'Descubre la tecnología que cambiará tu vida'} />
+            <Navbar />
+            <Hero greeting={'Tienda OnLine de Tecnología'} greeting2={'Descubre la tecnología que cambiará tu vida'} />
           <Routes>
             <Route path='/' element={<ItemListContainer />}/>
             <Route path="/category/:categoryId" element={<ItemListContainer />}/>

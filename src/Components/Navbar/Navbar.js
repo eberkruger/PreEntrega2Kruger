@@ -14,7 +14,7 @@ const Navbar = () => {
             <div id='navFiltros' className='navFiltros'>
                 <ul>
                     <li>
-                        <Link to='/category/Smartphones' /* className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'} */><FilterButtons label='Smartphones' callback={() => console.log('Smartphones')} /></Link>
+                        <Link to='/category/Smartphones' /* className={({ isActive }) => isActive ? 'disabled' : 'cardContainer'} */><FilterButtons label='Smartphones' callback={() => console.log('Smartphones')} /></Link>
                     </li>
                     <li>
                         <Link to='/category/Portátiles'><FilterButtons label='Portátiles' callback={() => console.log('Portátiles')} /></Link>
