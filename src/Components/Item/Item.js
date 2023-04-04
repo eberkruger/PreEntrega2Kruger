@@ -1,7 +1,7 @@
 import '../../Styles/styles.scss'
 import { Link } from 'react-router-dom'
 import { useContext } from 'react'
-import { Context } from '../../App'
+import { Context } from '../../Context/CartContext'
 
 const Item = ({ nombre, descripcion, imgUrl, precio, id }) => {
 

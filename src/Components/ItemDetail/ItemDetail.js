@@ -1,7 +1,7 @@
 import '../../Styles/styles.scss'
 import ItemCount from '../ItemCount/ItemCount'
 import { useContext } from 'react'
-import { Context } from '../../App'
+import { Context } from '../../Context/CartContext'
 
 const ItemDetail = ({ id, nombre, imgUrl, categoria, detalles, precio, stock}) => {
 
