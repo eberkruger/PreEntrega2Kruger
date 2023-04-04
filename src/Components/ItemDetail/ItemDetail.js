@@ -1,11 +1,11 @@
 import '../../Styles/styles.scss'
 import ItemCount from '../ItemCount/ItemCount'
 import { useContext } from 'react'
-import { Context } from '../../Context/CartContext'
+import { CartContext } from '../../Context/CartContext'
 
 const ItemDetail = ({ id, nombre, imgUrl, categoria, detalles, precio, stock}) => {
 
-    const {addItem} = useContext(Context)
+    const {addItem} = useContext(CartContext)
 
     const handleOnAdd = (quantity) => {
         const productToAdd = {
