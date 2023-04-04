@@ -9,10 +9,23 @@ export const Context = createContext('Valor Inicial')
 
 const App = () => {
   const [cart, setCart] = useState([])
+  console.log(cart)
+
+  const addItem = (productToAdd) => {
+    if(!isInCart(productToAdd.id)) {
+      setCart(prev => [...prev, productToAdd])
+    } else {
+      console.log("no se agrega porque ya esta")
+    }
+  }
+
+  const isInCart = (id) => {
+    return cart.some(prod => prod.id === id)
+  }
 
   return (
     <div className="App">
-      <Context.Provider value={{cart, setCart}}>
+      <Context.Provider value={{cart, addItem}}>
         <BrowserRouter >
               <Navbar />
             <Routes>

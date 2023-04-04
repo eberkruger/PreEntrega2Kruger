@@ -1,13 +1,17 @@
 import '../../Styles/styles.scss'
 import ItemCount from '../ItemCount/ItemCount'
+import { useContext } from 'react'
+import { Context } from '../../App'
 
 const ItemDetail = ({ id, nombre, imgUrl, categoria, detalles, precio, stock}) => {
+
+    const {addItem} = useContext(Context)
 
     const handleOnAdd = (quantity) => {
         const productToAdd = {
             id, nombre, precio, quantity
         }
-        console.log(productToAdd)
+        addItem(productToAdd)
     }
 
     return (
