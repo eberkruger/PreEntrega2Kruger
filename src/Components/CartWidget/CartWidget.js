@@ -1,18 +1,16 @@
 import '../../Styles/styles.scss'
 import cartSvg from './assets/cart.svg'
-import { useState } from 'react'
+import { useCart } from '../../Context/CartContext'
+
 
 const CartWidget = () => {
-    const [count, setCount] = useState(0)
 
-    const increment = () => {
-        setCount(prev => prev + 1)
-    }
-    
+    const { totalQuantity } = useCart()
+
     return (
         <div className='navCarrito'>
-            <a href='##' onClick={increment}><img src={cartSvg} alt='Cart'/></a>
-            <small>{count}</small>
+            <a href='##'><img src={cartSvg} alt='Cart' /></a>
+            <small>{totalQuantity}</small>
         </div>
     )
 }
