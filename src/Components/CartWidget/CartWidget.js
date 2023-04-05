@@ -1,6 +1,7 @@
 import '../../Styles/styles.scss'
 import cartSvg from './assets/cart.svg'
 import { useCart } from '../../Context/CartContext'
+import { Link } from 'react-router-dom'
 
 
 const CartWidget = () => {
@@ -9,7 +10,7 @@ const CartWidget = () => {
 
     return (
         <div className='navCarrito'>
-            <a href='##'><img src={cartSvg} alt='Cart' /></a>
+            <Link to={'/cart'}><img src={cartSvg} alt='Cart' /></Link>
             <small>{totalQuantity}</small>
         </div>
     )

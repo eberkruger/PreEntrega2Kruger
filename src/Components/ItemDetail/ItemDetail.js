@@ -1,11 +1,11 @@
 import '../../Styles/styles.scss'
 import ItemCount from '../ItemCount/ItemCount'
-import { useContext } from 'react'
-import { CartContext } from '../../Context/CartContext'
+import { Link } from 'react-router-dom'
+import { useCart } from '../../Context/CartContext'
 
 const ItemDetail = ({ id, nombre, imgUrl, categoria, detalles, precio, stock}) => {
 
-    const {addItem} = useContext(CartContext)
+    const {addItem , isInCart} = useCart()
 
     const handleOnAdd = (quantity) => {
         const productToAdd = {
@@ -18,7 +18,13 @@ const ItemDetail = ({ id, nombre, imgUrl, categoria, detalles, precio, stock}) =
         <div className='cardDetail'>
             <div className='cardDetailLeft'>
                 <img src={imgUrl} alt={nombre} className="cardDetailImg"/>
-                <ItemCount onAdd={handleOnAdd} stock={stock}/>
+                {
+                    isInCart(id) ? (
+                        <Link to={'/cart'} className='endShop'>Carrito de Compras</Link>
+                    ) : (
+                        <ItemCount onAdd={handleOnAdd} stock={stock}/>
+                    )
+                }
             </div>
             <div className='cardDetailRight'>
                 <h3 className='cardDetailTitle'>{nombre}</h3>
