@@ -14,26 +14,26 @@ const Navbar = () => {
             <div id='navFiltros' className='navFiltros'>
                 <ul>
                     <li>
-                        <Link to='/category/Smartphones' className='linkNavbar'><FilterButtons label='Smartphones' callback={() => console.log('Smartphones')} /></Link>
+                        <Link to='/category/Smartphones' className='linkNavbar'><FilterButtons label='Smartphones'/></Link>
                     </li>
                     <li>
-                        <Link to='/category/Portátiles' className='linkNavbar'><FilterButtons label='Portátiles' callback={() => console.log('Portátiles')} /></Link>
+                        <Link to='/category/Portátiles' className='linkNavbar'><FilterButtons label='Portátiles'/></Link>
                     </li>
                     <li>
-                        <Link to='/category/Tabletas' className='linkNavbar'><FilterButtons label='Tabletas' callback={() => console.log('Tabletas')} /></Link>
+                        <Link to='/category/Tabletas' className='linkNavbar'><FilterButtons label='Tabletas'/></Link>
                     </li>
                     <li>
-                        <Link to='/category/Auriculares' className='linkNavbar'><FilterButtons label='Auriculares' callback={() => console.log('Auriculares')} /></Link>
+                        <Link to='/category/Auriculares' className='linkNavbar'><FilterButtons label='Auriculares'/></Link>
                     </li>
                     <li>
-                        <Link to='/category/Televisores' className='linkNavbar'><FilterButtons label='Televisores' callback={() => console.log('Televisores')} /></Link>
+                        <Link to='/category/Televisores' className='linkNavbar'><FilterButtons label='Televisores'/></Link>
                     </li>
                 </ul>
             </div>
 
             <div className='navAcciones'>
                 <SearchBar />
-                <CartWidget callback={() => console.log('Carrito')} />
+                <CartWidget />
             </div>
         </nav>
     )

@@ -1,13 +1,8 @@
 import '../../Styles/styles.scss'
 import { Link } from 'react-router-dom'
-/* import { useContext } from 'react'
-import { CartContext } from '../../Context/CartContext' */
 
 const Item = ({ nombre, descripcion, imgUrl, precio, id }) => {
 
-    /* const value = useContext(Context)
-    console.log(value)
- */
     return (
         <div className='card'>
             <h3>{nombre}</h3>
