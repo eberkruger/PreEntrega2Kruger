@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { getDocs, collection, query, where } from 'firebase/firestore'
 import { db } from '../../Services/Firebase/firebaseConfig'
 import { useParams } from 'react-router-dom'
+import RiseLoader from 'react-spinners/RiseLoader'
 import ItemList from '../ItemList/ItemList'
 import Hero from '../Hero/Hero'
 import '../../Styles/styles.scss'
@@ -38,8 +39,13 @@ const ItemListContainer = () => {
 
     if(loading) {
         return (
-            <div>
-                <p>Cargando...</p>
+            <div className='spinner'>
+                <RiseLoader
+                color="#36cdd6"
+                margin={5}
+                size={15}
+                speedMultiplier={2}
+                />
             </div>
         )
     }

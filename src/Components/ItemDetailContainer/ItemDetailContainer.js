@@ -4,6 +4,7 @@ import ItemDetail from '../ItemDetail/ItemDetail'
 import { useParams } from 'react-router-dom'
 import { db } from '../../Services/Firebase/firebaseConfig'
 import { getDoc, doc } from 'firebase/firestore'
+import RiseLoader from 'react-spinners/RiseLoader'
 
 
 const ItemDetailContainer = () => {
@@ -35,8 +36,13 @@ const ItemDetailContainer = () => {
 
     if(loading) {
         return (
-            <div>
-                <p>Cargando...</p>
+            <div className='spinner'>
+                <RiseLoader
+                color="#36cdd6"
+                margin={5}
+                size={15}
+                speedMultiplier={2}
+                />
             </div>
         )
     }
