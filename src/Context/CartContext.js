@@ -44,7 +44,6 @@ export const CartProvider = ({ children }) => {
 
         return total
     }
-    console.log(getTotal())
     const total = getTotal() 
 
     const clearCart = () => {

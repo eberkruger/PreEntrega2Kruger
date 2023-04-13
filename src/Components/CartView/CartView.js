@@ -1,6 +1,7 @@
 import CartItem from "../CartItem/CartItem"
-  
+
 const CartView = () => {
+
    return (
         <div className="cartView">
             <CartItem />

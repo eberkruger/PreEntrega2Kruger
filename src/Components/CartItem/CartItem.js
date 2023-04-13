@@ -1,9 +1,19 @@
 import '../../Styles/styles.scss'
 import { useCart } from '../../Context/CartContext'
+import { Link } from 'react-router-dom'
 
 const CartItem = () => {
 
-    const { cart, removeItem } = useCart()
+    const { cart, removeItem, totalQuantity } = useCart()
+    
+    if(!totalQuantity){
+        return(
+            <div className='emptyCart'>
+                <h2>Carrito Vacio</h2>
+                <Link to='/' className='emptyCartLink'>Seguir Comprando</Link>
+            </div>
+        )
+    }
 
     return (
         <div className='cartContainer'>
