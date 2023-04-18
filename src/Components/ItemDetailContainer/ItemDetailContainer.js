@@ -38,7 +38,7 @@ const ItemDetailContainer = () => {
         return (
             <div className='spinner'>
                 <RiseLoader
-                color="#36cdd6"
+                color="#0A4D68"
                 margin={5}
                 size={15}
                 speedMultiplier={2}

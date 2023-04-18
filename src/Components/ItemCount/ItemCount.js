@@ -1,5 +1,8 @@
 import '../../Styles/styles.scss'
 import { useState } from 'react'
+import { AgregarAlCarrito } from '../../Notification/NotificationService'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
 
@@ -25,8 +28,9 @@ const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
                 <button className='controlsButton' onClick={increment}><span>+</span></button>
             </div>
             <div className='cartAddContainer'>
-                <button className='cartAdd' onClick={() => onAdd(quantity)}>Agregar al carrito</button>
+                <button className='cartAdd' onClick={() => {AgregarAlCarrito(); onAdd(quantity)}}>Agregar al carrito</button>
             </div>
+            <ToastContainer />
         </div>
     )
 }

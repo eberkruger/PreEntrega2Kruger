@@ -5,6 +5,8 @@ import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailCont
 import CartView from './Components/CartView/CartView';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { CartProvider } from './Context/CartContext';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -22,6 +24,7 @@ const App = () => {
             <Route path='/cart' element= {<CartView />} />
             <Route path='/checkout' element={<h2>Checkout</h2>} />
           </Routes>
+          <ToastContainer />
         </CartProvider>
       </BrowserRouter>
     </div>

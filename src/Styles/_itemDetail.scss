@@ -29,18 +29,25 @@
       object-fit: cover;
     }
 
-    .endShop {
-      border: black solid 1px;
-      border-radius: 6px;
-      padding: 8px;
-      text-transform: uppercase;
+    .endShopAction {
+      display: flex;
+      flex-wrap: wrap;
+      gap:20px;
 
-      &:hover {
-        box-shadow: 0 0 1px 1px black;
-      }
-
-      &:active {
-        box-shadow: 0 0 1.5px 1.5px black;
+      .endShop {
+        border: black solid 1px;
+        border-radius: 6px;
+        padding: 8px;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+  
+        &:hover {
+          box-shadow: 0 0 1px 1px black;
+        }
+  
+        &:active {
+          box-shadow: 0 0 1.5px 1.5px black;
+        }
       }
     }
   }

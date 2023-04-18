@@ -1,10 +1,12 @@
 import '../../Styles/styles.scss'
 import { useCart } from '../../Context/CartContext'
 import { Link } from 'react-router-dom'
+import { VaciarCarrito } from '../../Notification/NotificationService'
+import { EliminarProducto } from '../../Notification/NotificationService'
 
 const CartItem = () => {
 
-    const { cart, removeItem, totalQuantity } = useCart()
+    const { cart, removeItem, totalQuantity, total, clearCart } = useCart()
     
     if(!totalQuantity){
         return(
@@ -39,11 +41,19 @@ const CartItem = () => {
                                 <small>Subtotal</small>
                                 <p>USD<span>{prod.quantity * prod.precio}</span></p>
                             </div>
-                            <button onClick={() => removeItem(prod.id)}>Eliminar Producto</button>
+                            <button onClick={() => {removeItem(prod.id); EliminarProducto()}}>Eliminar Producto</button>
                         </div>
                     )
                 })
             }
+
+            <div className='cartAction'>
+                <button onClick={()=>{clearCart(); VaciarCarrito()}}>Vaciar Carrito</button>
+                <div className='cartActionRight'>
+                    <p className='cartActionTotal'>Total: USD<span>{total}</span></p>
+                    <Link to='/checkout' className='cartActionCheckout' onClick={clearCart}>Finalizar Compra</Link>
+                </div>
+            </div>
         </div>
     )
 }

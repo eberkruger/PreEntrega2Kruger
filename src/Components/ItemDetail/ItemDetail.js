@@ -20,7 +20,10 @@ const ItemDetail = ({ id, nombre, imgUrl, categoria, detalles, precio, stock}) =
                 <img src={imgUrl} alt={nombre} className="cardDetailImg"/>
                 {
                     isInCart(id) ? (
-                        <Link to={'/cart'} className='endShop'>Carrito de Compras</Link>
+                        <div className='endShopAction'>
+                            <Link to='/' className='endShop'>Seguir Comprando</Link>
+                            <Link to={'/cart'} className='endShop'>Carrito de Compras</Link>
+                        </div>
                     ) : (
                         <ItemCount onAdd={handleOnAdd} stock={stock}/>
                     )
