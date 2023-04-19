@@ -65,7 +65,7 @@ const Checkout = () => {
                 setTimeout(() => {
                     navigate('/')
                 }, 8000);
-
+                
             } else {
                 console.log('Error, hay productos que no tienen stock')
             }
