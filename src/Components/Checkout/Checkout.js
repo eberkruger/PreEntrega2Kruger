@@ -4,6 +4,7 @@ import { collection, query, where, documentId, getDocs, writeBatch, addDoc } fro
 import { db } from "../../Services/Firebase/firebaseConfig"
 import { useState } from "react"
 import RiseLoader from "react-spinners/RiseLoader"
+import { OrdenGenerada } from "../../Notification/NotificationService"
 import { useNavigate } from "react-router-dom"
 import '../../Styles/styles.scss'
 
@@ -55,17 +56,16 @@ const Checkout = () => {
                 batch.commit()
     
                 const ordersRef = collection(db, 'orders')
-    
                 const orderAdded = await addDoc(ordersRef, objOrder)
 
                 clearCart()
-
-                console.log('Genial, la orden se generó correctamente')
+                OrdenGenerada()
                 setOrderId(orderAdded.id)
 
                 setTimeout(() => {
                     navigate('/')
                 }, 8000);
+
             } else {
                 console.log('Error, hay productos que no tienen stock')
             }
