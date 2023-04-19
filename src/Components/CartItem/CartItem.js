@@ -51,7 +51,7 @@ const CartItem = () => {
                 <button onClick={()=>{clearCart(); VaciarCarrito()}}>Vaciar Carrito</button>
                 <div className='cartActionRight'>
                     <p className='cartActionTotal'>Total: USD<span>{total}</span></p>
-                    <Link to='/checkout' className='cartActionCheckout' onClick={clearCart}>Finalizar Compra</Link>
+                    <Link to='/checkout' className='cartActionCheckout'>Finalizar Compra</Link>
                 </div>
             </div>
         </div>
