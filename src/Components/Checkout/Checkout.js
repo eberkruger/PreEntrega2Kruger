@@ -3,7 +3,7 @@ import { collection, query, where, documentId, getDocs, writeBatch, addDoc } fro
 import { db } from "../../Services/Firebase/firebaseConfig"
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import { OrdenGenerada } from "../../Notification/NotificationService"
+import { OrdenGenerada, FueraDeStock } from "../../Notification/NotificationService"
 import ContactForm from "../ContactForm/ContactForm"
 import RiseLoader from "react-spinners/RiseLoader"
 import '../../Styles/styles.scss'
@@ -62,7 +62,7 @@ const Checkout = () => {
                 setOrderId(orderAdded.id)
                 
             } else {
-                console.log('Error, hay productos que no tienen stock')
+                FueraDeStock()
             }
         } catch (error) {
             console.log('Error, hubo un error generando la orden')

@@ -1,6 +1,7 @@
 import Swal from 'sweetalert2'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Link } from 'react-router-dom';
 
 export const VaciarCarrito = () => {
     Swal.fire({
@@ -49,4 +50,13 @@ export const OrdenGenerada = () => {
         progress: undefined,
         theme: "dark",
         });
+}
+
+export const FueraDeStock = () => {
+    Swal.fire({
+        icon: 'error',
+        title: 'Lo sentimos...',
+        text: 'Producto sin Stock',
+        showConfirmButton: true,
+      })
 }
