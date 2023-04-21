@@ -1,7 +1,6 @@
 import Swal from 'sweetalert2'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Link } from 'react-router-dom';
 
 export const VaciarCarrito = () => {
     Swal.fire({
