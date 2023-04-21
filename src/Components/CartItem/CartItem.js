@@ -3,6 +3,7 @@ import { useCart } from '../../Context/CartContext'
 import { Link } from 'react-router-dom'
 import { VaciarCarrito } from '../../Notification/NotificationService'
 import { EliminarProducto } from '../../Notification/NotificationService'
+import trashSvg from './assets/trash-regular.png'
 
 const CartItem = () => {
 
@@ -23,6 +24,7 @@ const CartItem = () => {
             {
                 cart.map((prod) => {
                     return (
+                        <>
                         <div key={prod.id} className="cartItem">
                             <img src={prod.imgUrl} alt={prod.nombre}/>
                             <div className='cartItemName'>
@@ -41,8 +43,10 @@ const CartItem = () => {
                                 <small>Subtotal</small>
                                 <p>USD<span>{prod.quantity * prod.precio}</span></p>
                             </div>
-                            <button onClick={() => {removeItem(prod.id); EliminarProducto()}}>Eliminar Producto</button>
+                            <button onClick={() => {removeItem(prod.id); EliminarProducto()}}><img src={trashSvg} alt='Trash' /></button>
                         </div>
+                        <div className='linea'></div>
+                        </>
                     )
                 })
             }

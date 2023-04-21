@@ -11,8 +11,8 @@
   gap: 10px;
   padding: 30px 50px 40px 50px;
   border-radius: 50px;
-  background: #e0e0e0;
-  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  background: #ffffff;
+  box-shadow: 5px 5px 33px #cccccc, -5px -5px 33px #ffffff;
 
   h3 {
     text-transform: uppercase;
@@ -24,7 +24,7 @@
     background-color: #e7e6e1;
     gap: 10px;
     outline: none;
-    border-radius: 3px;
+    border-radius: 6px;
     padding: 10px;
     width: 100%;
   }
@@ -40,18 +40,34 @@
     text-transform: uppercase;
     margin-top: 20px;
     border-radius: 10px;
-    background: #cfcfcf;
-    box-shadow: 20px 20px 60px #b0b0b0, -20px -20px 60px #eeeeee;
+    background: #537fe7;
+    color: white;
     transition: all 0.3s ease;
     cursor: pointer;
 
     &:hover {
-      background: #d6d6d6;
-      box-shadow: 9px 9px 15px #bababa, -9px -9px 15px #f2f2f2;
+      background: #80a2f1;
     }
+  }
+}
 
-    &:active {
-      box-shadow: 0 0 1.5px 1.5px black;
+.shopOrderId {
+  .emptyCartLink {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    width: max-content;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    background-color: #537fe7;
+    color: white;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #80a2f1;
     }
   }
 }

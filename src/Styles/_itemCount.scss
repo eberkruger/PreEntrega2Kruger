@@ -27,18 +27,18 @@
       height: 32px;
       padding: 5px;
       cursor: pointer;
-      border-radius: 10px;
-      background: #cfcfcf;
-      box-shadow: 20px 20px 60px #b0b0b0, -20px -20px 60px #eeeeee;
+      border-radius: 6px;
+      background: #537FE7;
+      color: white;
       transition: all 0.3s ease;
 
       &:hover {
-        background: #d6d6d6;
-        box-shadow: 9px 9px 15px #bababa, -9px -9px 15px #f2f2f2;
+        background: #80a2f1;
       }
 
       &:active {
-        box-shadow: 0 0 1.5px 1.5px black;
+        transform: scale(0.9);
+        background: #537FE7;
       }
     }
 
@@ -53,13 +53,12 @@
       display: flex;
       padding: 8px;
       border-radius: 10px;
-      background: #cfcfcf;
-      box-shadow: 20px 20px 60px #b0b0b0, -20px -20px 60px #eeeeee;
+      background: #537FE7;
+      color: white;
       transition: all 0.3s ease;
 
       &:hover {
-        background: #d6d6d6;
-        box-shadow: 9px 9px 15px #bababa, -9px -9px 15px #f2f2f2;
+        background: #80a2f1;
       }
     }
 
@@ -68,17 +67,11 @@
       font-weight: 500;
       text-transform: uppercase;
       cursor: pointer;
-      background: #cfcfcf;
-      box-shadow: 20px 20px 60px #b0b0b0, -20px -20px 60px #eeeeee;
+      background: #537FE7;
       transition: all 0.3s ease;
 
       &:hover {
-        background: #d6d6d6;
-        box-shadow: 9px 9px 15px #bababa, -9px -9px 15px #f2f2f2;
-      }
-
-      &:active {
-        box-shadow: 0 0 1.5px 1.5px black;
+        background: #80a2f1;
       }
     }
   }
