@@ -2,7 +2,7 @@ import '../../Styles/styles.scss'
 import { Link } from 'react-router-dom'
 import FilterButtons from '../FilterButtons/FilterButtons'
 import CartWidget from '../CartWidget/CartWidget'
-import SearchBar from '../SearchBar/SearchBar'
+//import SearchBar from '../SearchBar/SearchBar'
 import { useState, useEffect } from 'react'
 import { collection, getDocs } from 'firebase/firestore'
 import { db } from '../../Services/Firebase/firebaseConfig'
@@ -48,7 +48,7 @@ const Navbar = () => {
             </div>
 
             <div className='navAcciones'>
-                <SearchBar />
+                {/* <SearchBar /> */}
                 <CartWidget />
             </div>
         </nav>

@@ -2,9 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: space-around;
+  text-align: center;
+  gap: 16%;
   flex-wrap: wrap;
-  height: auto;
   padding: 10px;
 }
 
@@ -12,6 +12,7 @@
   display: flex;
   text-decoration: none;
   text-transform: uppercase;
+  padding: 8px;
 
   h1 {
     margin: 0;
@@ -26,6 +27,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
+  padding: 8px;
 
   ul {
     display: flex;
@@ -44,5 +46,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  padding: 8px;
+  width: 160px;
   gap: 0.8rem;
 }
