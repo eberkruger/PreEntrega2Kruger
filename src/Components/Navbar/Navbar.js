@@ -3,8 +3,29 @@ import { Link } from 'react-router-dom'
 import FilterButtons from '../FilterButtons/FilterButtons'
 import CartWidget from '../CartWidget/CartWidget'
 import SearchBar from '../SearchBar/SearchBar'
+import { useState, useEffect } from 'react'
+import { collection, getDocs } from 'firebase/firestore'
+import { db } from '../../Services/Firebase/firebaseConfig'
+
 
 const Navbar = () => {
+
+    const [categories, setCategories] = useState([])
+
+    useEffect(() => {
+
+        const categoriesRef = collection(db, 'categories')
+        
+        getDocs(categoriesRef)
+            .then(snapshot => {
+                const categoriesAdapted = snapshot.docs.map(doc => {
+                    const data = doc.data()
+                    return { id: doc.id, ...data}
+                })
+                setCategories(categoriesAdapted)
+            })
+    }, [])
+
     return (
         <nav className='navBar'>
             <div className="logo">
@@ -12,23 +33,18 @@ const Navbar = () => {
             </div>
 
             <div id='navFiltros' className='navFiltros'>
-                <ul>
-                    <li>
-                        <Link to='/category/Smartphones' className='linkNavbar'><FilterButtons label='Smartphones'/></Link>
-                    </li>
-                    <li>
-                        <Link to='/category/Portátiles' className='linkNavbar'><FilterButtons label='Portátiles'/></Link>
-                    </li>
-                    <li>
-                        <Link to='/category/Tabletas' className='linkNavbar'><FilterButtons label='Tabletas'/></Link>
-                    </li>
-                    <li>
-                        <Link to='/category/Auriculares' className='linkNavbar'><FilterButtons label='Auriculares'/></Link>
-                    </li>
-                    <li>
-                        <Link to='/category/Televisores' className='linkNavbar'><FilterButtons label='Televisores'/></Link>
-                    </li>
-                </ul>
+                {
+                    categories.map(cat => {
+                        return (
+                            <ul>
+                                <li>
+                                    <Link key={cat.id} to={`/category/${cat.slug}`} className='linkNavbar'><FilterButtons label={cat.label}/></Link>
+                                </li>
+                            </ul>
+                        )
+                       
+                    })
+                }
             </div>
 
             <div className='navAcciones'>
