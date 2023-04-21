@@ -1,0 +1,59 @@
+.spinnerCheckout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+    padding: 100px;
+
+    h3 {
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+}
+
+.shopOrderId {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 30px;
+    padding: 150px;
+    
+    h3 {
+        font-weight: 400;
+    }
+
+    .emptyCartLink {
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        text-transform: uppercase;
+        width: max-content;
+        padding: 15px;
+        border: 1px solid black;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+    
+        &:hover {
+            box-shadow: 0 0 1.5px 1.5px black;
+          }
+      }
+}
+
+.shopDataOrder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 30px 0 30px 0;
+
+    h2 {
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+}

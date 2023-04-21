@@ -18,10 +18,11 @@ const ContactForm = ({onConfirm}) => {
 
     return(
         <form onSubmit={handleSubmit} className="shopForm">
-            <input className="shopName" value={name} onChange={(e) => setName(e.target.value)}/>
-            <input className="shopPhone" value={phone} onChange={(e) => setPhone(e.target.value)}/>
-            <input className="shopEmail" value={email} onChange={(e) => setEmail(e.target.value)}/>
-            <input className="shopAddress" value={address} onChange={(e) => setAddress(e.target.value)}/>
+            <h3>Ingrese sus Datos</h3>
+            <input className="shopName" type='text' placeholder='Nombre completo'  value={name} onChange={(e) => setName(e.target.value)} required/>
+            <input className="shopPhone" type='number' placeholder='Celular' value={phone} onChange={(e) => setPhone(e.target.value)} required/>
+            <input className="shopEmail" type='email' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} required/>
+            <input className="shopAddress" type='text' placeholder='Dirección' value={address} onChange={(e) => setAddress(e.target.value)} required/>
             <button>Generar Orden</button>
         </form>
     )

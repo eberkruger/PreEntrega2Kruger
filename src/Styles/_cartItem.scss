@@ -1,6 +1,6 @@
 .cartView {
-    display: inline-block;
-    width: 100%;
+  display: inline-block;
+  width: 100%;
 }
 
 .emptyCart {
@@ -29,8 +29,8 @@
     transition: all 0.3s ease;
 
     &:hover {
-        box-shadow: 0 0 1.5px 1.5px black;
-      }
+      box-shadow: 0 0 1.5px 1.5px black;
+    }
   }
 }
 
@@ -54,8 +54,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 2px solid black;
-    border-radius: 6px;
+    border-radius: 10px;
+    background: #e0e0e0;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
     flex-wrap: wrap;
     height: auto;
     width: 100%;
@@ -122,7 +123,7 @@
 
     &:hover {
       background-color: #e73958;
-      border-color: white;
+      border-color: #e73958;
       color: white;
     }
   }
@@ -143,15 +144,17 @@
     }
 
     .cartActionCheckout {
-      border: 1px solid black;
       padding: 8px;
-      border-radius: 6px;
       font-weight: 500;
+      border-radius: 10px;
+      background: #cfcfcf;
+      box-shadow: 20px 20px 60px #b0b0b0, -20px -20px 60px #eeeeee;
       transition: all 0.3s ease;
+      cursor: pointer;
 
       &:hover {
-        border-color: #0A4D68;
-        box-shadow: 0 0 1px 1px black;
+        background: #d6d6d6;
+        box-shadow: 9px 9px 15px #bababa, -9px -9px 15px #f2f2f2;
       }
     }
   }

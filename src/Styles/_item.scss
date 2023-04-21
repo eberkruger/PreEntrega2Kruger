@@ -8,9 +8,10 @@
   padding: 10px;
   max-width: 350px;
   height: 480px;
-  border-radius: 8px;
-  border: black solid 2px;
-  background-color: white;
+  border-radius: 20px;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  //background-color: white;
 
   .precio {
     font-weight: 500;
@@ -47,12 +48,15 @@
       text-align: center;
       align-content: center;
       height: 40px;
-      border: black solid 1px;
-      border-radius: 6px;
       padding: 5px;
+      border-radius: 10px;
+      background: #cfcfcf;
+      box-shadow: 20px 20px 60px #b0b0b0, -20px -20px 60px #eeeeee;
+      transition: all 0.3s ease;
 
       &:hover {
-        box-shadow: 0 0 1px 1px black
+        background: #d6d6d6;
+        box-shadow: 9px 9px 15px #bababa, -9px -9px 15px #f2f2f2;
       }
     }
   }

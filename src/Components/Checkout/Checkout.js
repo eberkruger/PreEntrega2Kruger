@@ -1,11 +1,11 @@
-import ContactForm from "../ContactForm/ContactForm"
 import { useCart } from "../../Context/CartContext"
 import { collection, query, where, documentId, getDocs, writeBatch, addDoc } from "firebase/firestore"
 import { db } from "../../Services/Firebase/firebaseConfig"
 import { useState } from "react"
-import RiseLoader from "react-spinners/RiseLoader"
+import { Link } from "react-router-dom"
 import { OrdenGenerada } from "../../Notification/NotificationService"
-import { useNavigate } from "react-router-dom"
+import ContactForm from "../ContactForm/ContactForm"
+import RiseLoader from "react-spinners/RiseLoader"
 import '../../Styles/styles.scss'
 
 const Checkout = () => {
@@ -13,7 +13,6 @@ const Checkout = () => {
     const [orderId, setOrderId] = useState('')
     const [loading, setLoading] = useState(false)
     const {cart, total, clearCart} = useCart()
-    const navigate = useNavigate()
 
     const createOrder = async () => {
         try {
@@ -61,10 +60,6 @@ const Checkout = () => {
                 clearCart()
                 OrdenGenerada()
                 setOrderId(orderAdded.id)
-
-                setTimeout(() => {
-                    navigate('/')
-                }, 8000);
                 
             } else {
                 console.log('Error, hay productos que no tienen stock')
@@ -78,7 +73,7 @@ const Checkout = () => {
 
     if(loading) {
         return(
-            <div className='spinner'>
+            <div className='spinnerCheckout'>
                 <h3>Generando Orden</h3>
                 <RiseLoader
                 color="#0A4D68"
@@ -94,6 +89,8 @@ const Checkout = () => {
         return (
             <div className="shopOrderId">
                 <h3>El ID de su compra es {orderId}</h3>
+                <p>Gracias por visitarnos!</p>
+                <Link to='/' className='emptyCartLink'>Seguir Comprando</Link>
             </div>
         )
     }
@@ -101,7 +98,6 @@ const Checkout = () => {
     return (
         <div className="shopDataOrder">
             <h2>Finalizar compra</h2>
-            <h3>Ingrese sus datos</h3>
             <ContactForm onConfirm={createOrder}/>
         </div>
     )
