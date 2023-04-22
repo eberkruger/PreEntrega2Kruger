@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# Techzone
+## Ecommerce desarrollado con React JS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Techzone es un proyecto de ecommerce desarrollado con create-react-app que permite la compra de productos tecnológicos. Utiliza Firebase como base de datos para obtener los productos y enviar órdenes de compra, y también utiliza Node.js y Sass para su desarrollo.
 
-## Available Scripts
+Con este proyecto podrás: 
+- Crear una aplicación web en tiempo real.
+- Almacenar datos en la nube.
 
-In the project directory, you can run:
+## Instalación
 
-### `npm start`
+Para poder utilizar este proyecto, necesitarás tener instalado Node.js, SASS y NPM en tu computadora.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clona este repositorio: git clone https://github.com/eberkruger/ProyectoReactJS
+2. Navega al directorio del proyecto: cd tu-repo
+3. Instala las dependencias: npm install
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Configuración
 
-### `npm test`
+1. Crea una cuenta en Firebase y crea un nuevo proyecto.
+2. Haz clic en "Agregar aplicación" y elige "Web".
+3. Completa los detalles de la aplicación y haz clic en "Registrar".
+4. Copia la configuración de Firebase y pégala en el archivo .env de tu proyecto:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```sh
+REACT_APP_API_KEY=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+REACT_APP_AUTH_DOMAIN=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+REACT_APP_PROJECT_ID=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+REACT_APP_STORAGE_BUCKET=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+REACT_APP_MESSAGING_SENDER_ID=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+REACT_APP_APP_ID=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+```
 
-### `npm run build`
+5. Abre la consola de Firebase y haz clic en "Database" en la barra lateral izquierda.
+6. Crea una nueva base de datos en tiempo real y configúrala según tus necesidades.
+7. Copia la URL de tu base de datos y pégala en el archivo src/firebase/config.js:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```sh
+import firebase from "firebase/app";
+import "firebase/database";
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+const firebaseConfig = {
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
+  databaseURL: "https://tu-base-de-datos.firebaseio.com",
+};
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+firebase.initializeApp(firebaseConfig);
 
-### `npm run eject`
+export default firebase;
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Uso
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Para iniciar la aplicación, ejecuta el siguiente comando en la terminal:
+```sh
+npm start
+```
+La aplicación se abrirá automáticamente en tu navegador. Si no es así, ve a http://localhost:3000 en tu navegador.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Créditos
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este proyecto fue desarrollado por Eber Kruger.
